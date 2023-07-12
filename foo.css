@@ -1,0 +1,27 @@
+.footer-link-list{
+  list-style: none;
+}
+.fullfoot{
+
+  display:block;
+
+  background: #ce8888;
+}
+.logo{
+  width: auto;
+  float: right;
+  margin-left: 280px;
+  margin-right: 100px;
+}
+.links{
+  width: 15% ;
+  float:right;
+
+}
+.ndlinks{
+  width: 15% ;
+}
+.fullfoot{
+  display: flex;
+   flex-direction: row;
+}

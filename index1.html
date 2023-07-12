@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css and js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+
+    <!-- QR CODE: -->
+    <script src="./jqeury.js"></script>
+    <script src="./jsqrcode-combined.js"></script>
+    <script src="./html5-qrcode.js"></script>
+  </head>
+
+
+  <body>
+
+
+  <section id="title">
+  <div class="container-fulid">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+  <a style="font-size:25px" class="navbar-brand" href="">Eazy Cycles</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+            <a class="nav-link" href="">Home</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="">Our Cycles</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="">Policies</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="">Help</a>
+         </li>
+         <!-- <li class="nav-item">
+            <a class="nav-link" href="qrcode.html">SCAN</a>
+         </li> -->
+         <li class="nav-item">
+            <a class="nav-link" href=""><i class="fab fa-duotone fa-circle-user"></i></a>
+         </li>
+      </ul>
+    </div>
+  </nav>
+
+    <h1>Moving towards <br> a Sustainable future.</h1>
+    <button class="sign" type="button" name="button">Sign Up</button>
+    <button class="sign" type="button" name="button">Sign In</button>
+  </div>
+  </section>
+
+  <section id="instsec">
+
+    <h2 class="in">How Eazy ?</h2>
+    <div class="inst">
+
+      <div class="inst-box">
+        <h4>Locate a Yulu</h4>
+        <p>Use the eazy website to find the closest vehicle to you or look out for a Yulu Zone around you.</p>
+      </div>
+
+      <div class="inst-box">
+        <h4>Scan the QR code</h4>
+        <p>To unlock the vehicle, simply scan the QR code located on the panel.</p>
+      </div>
+
+      <div class="inst-box">
+        <h4>Ride Safely</h4>
+        <p>Enjoy the Eazy ride but remember to abide by all the laws and parking policies.</p>
+      </div>
+
+      <div class="inst-box">
+        <h4>End your ride</h4>
+        <p>To end your ride, park the vehicle at a Eazy Zone, lock it and click on the End button on the website.</p>
+      </div>
+
+    </div>
+
+  </section>
+  <section>
+    <div id="qr-reader"
+    style="margin-left: 300px;
+    margin-right: 300px;
+    border-width: 10px;
+     "> 
+
+    </div>
+    <script>
+        function onScanSuccess(decodedText, decodedResult) {
+    console.log(`Code scanned = ${decodedText}`, decodedResult);
+}
+var html5QrcodeScanner = new Html5QrcodeScanner(
+	"qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+    </script>
+  </section>
+
+
+  <section>
+
+    <h2>Where Yolo ?</h2>
+    <!-- <div style="max-width:100%;overflow:hidden;color:red;width:900px;height:450px;">
+            <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+              <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=chennai&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+              </iframe>
+            </div>
+            <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+            <!-- <style>
+              #embedmap-canvas img {
+                width: 600px;
+                background: none !important;
+                font-size: inherit;
+                font-weight: inherit;
+              }
+            </style> -->
+          </div> -->
+<!-- <div id="map_container" style="width: 50%; height: 350px;">
+
+</div>
+<script type="text/javascript" >
+function initialize_map() {
+        var mapDiv = document.getElementById('map_container');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 12.91651, lng: 79.13250},
+            zoom: 10
+        });
+}
+var markerlocations = [
+ [12.916517, 79.132500, 'cycle', 'pngfind.com-bicycle-png-515901.png'],
+
+];
+var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(markerlocations[i][0], markerlocations[i][1]),
+      map: map,
+      icon:  markerlocations[i][3]
+});
+var infowindow = new google.maps.InfoWindow({
+ content: address
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initialize_map">
+</script> -->
+  </section>
+
+  <section id="touch">
+    <h2 style="padding-bottom:5px;">Stay in Touch !</h2>
+    <p style="color:#16213E;padding-bottom:8px;">Eazy is always innovating and creating some exciting solutions for your woes.</p>
+    <form class="" action="index.html" method="post">
+      <input class="mail" type="mail" name="" value="" placeholder="  Email">
+      <input class="sub" type="submit" name="" value="Subscribe">
+    </form>
+  </section>
+
+
+  <footer>
+          <div class="container py-5 px-md-0">
+      <div class="row">
+          <div class="col-md-4 col-lg-2 logo-wrapper">
+              <img src="https://www.yulu.bike/wp-content/uploads/2019/08/Yulu-Logo.svg" onclick="window.location='https://www.yulu.bike'" alt="Yulu">
+          </div>
+          <div class="col-12 col-md-6 download-btn-container d-md-none hidden-section">
+              <div class="download-btn-wrapper">
+                  <a class="nav-link download-btn" href="https://play.google.com/store/apps/details?id=app.yulu.bike" rel="noopener" target="_blank">
+                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/g-play.svg" class="img img-fluid" alt="Yulu App - Google Store">
+                  </a>
+              </div>
+              <div class="download-btn-wrapper">
+                  <a class="nav-link download-btn" href="https://itunes.apple.com/in/app/yulu-bike/id1331504548" rel="noopener" target="_blank">
+                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/app-store.svg" class="img img-fluid" alt="Yulu App - Apple Store">
+                  </a>
+              </div>
+          </div>
+          <div class="col-md-8 col-lg-6 footer-links-and-address-container">
+              <div class="row footer-links-and-address-wrapper">
+                  <div class="col-6 col-md-4 footer-links-wrapper quick-links"> <ul id=" " class="footer-link-list"><li id="menu-item-702" class="footer-link-list-item menu-item menu-item-type-post_type menu-item-object-page menu-item-702"><a href="https://www.yulu.bike/blogs/" class="">Blogs</a></li>
+  <li id="menu-item-49" class="footer-link-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-49"><a href="/about" class="">About</a></li>
+  <li id="menu-item-50" class="footer-link-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-50"><a href="https://ats.careers.yulu.bike/" class="">Careers</a></li>
+  <li id="menu-item-3954" class="footer-link-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-3954"><a href="https://newsroom.yulu.bike" class="">NewsRoom</a></li>
+  <li id="menu-item-53" class="footer-link-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a href="/privacy-policy" class="">Privacy Policy</a></li>
+  <li id="menu-item-54" class="footer-link-list-item menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a target="_blank" rel="noopener noreferrer" href="/policy/user_agreement.html" class="">User Agreement</a></li>
+  <li id="menu-item-753" class="footer-link-list-item menu-item menu-item-type-post_type menu-item-object-page menu-item-753"><a href="https://www.yulu.bike/faq/" class="">FAQs</a></li>
+  </ul>                </div>
+                  <div class="col-6 col-md-3 footer-links-wrapper product-list-wrapper">
+                      <h4 class="footer-list-heading">Product</h4>
+                      <ul class="footer-link-list">                             <li class="footer-link-list-item">
+                                  <a href="https://www.yulu.bike/products/miracle/">Miracle</a>
+                              </li>                             <li class="footer-link-list-item">
+                                  <a href="https://www.yulu.bike/products/move/">Move</a>
+                              </li>                             <li class="footer-link-list-item">
+                                  <a href="https://www.yulu.bike/products/dex/">Dex</a>
+                              </li>                     </ul>
+                  </div>
+                  <div class="col-12 col-md-4 px-md-0 footer-links-wrapper addressWrapper">
+                      <h4 class="footer-list-heading">Address</h4>
+                      <p class="addressText"> </p><div class="textwidget custom-html-widget">Yulu, 1st Floor, <br class="d-none d-md-block">Aurbis Business Park, <br class="d-none d-md-block">Survey No. 58, 7, Outer Ring Rd,
+  Devarabisanahalli, Bellandur, <br class="d-none d-md-block">Bengaluru, Karnataka 560103 <br class="d-none d-md-block">India
+
+
+  </div>                    <p></p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 col-lg-4 download-btns-and-social-links-container">
+              <div class="row download-btns-social-links-wrapper">
+                  <div class="col-12 col-md-6 col-lg-12 download-btn-container d-none d-md-flex">
+                      <h4 class="footer-list-heading">Download App</h4>
+                      <div class="download-btn-wrapper">
+                          <a class="nav-link download-btn" href="https://play.google.com/store/apps/details?id=app.yulu.bike" rel="noopener" target="_blank">
+                              <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/g-play.svg" class="img img-fluid" alt="Yulu App - Google Store">
+                          </a>
+                      </div>
+                      <div class="download-btn-wrapper">
+                          <a class="nav-link download-btn" href="https://itunes.apple.com/in/app/yulu-bike/id1331504548" rel="noopener" target="_blank">
+                              <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/app-store.svg" class="img img-fluid" alt="Yulu App - Apple Store">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-12 footer-links-wrapper social-media-icons-container">
+                      <h4 class="footer-list-heading">Follow Us on</h4>
+                      <div class="social-icons-container">                             <a rel="noopener" target="_blank" href="https://www.facebook.com/yulumobility/">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/fb.svg" alt="Facebook">
+                              </a>                             <a rel="noopener" target="_blank" href="https://www.instagram.com/yulubike/">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/instagram.svg" alt="Instagram">
+                              </a>                             <a rel="noopener" target="_blank" href="https://www.linkedin.com/company/yulu/">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/linkdn.svg" alt="Linkdin">
+                              </a>                             <a rel="noopener" target="_blank" href="https://twitter.com/yulubike">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/twittr.svg" alt="Twitter">
+                              </a>                             <a rel="noopener" target="_blank" href="https://www.youtube.com/channel/UCvdrpmOQYF1N6Eh52b5S1Kg">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/youtube.svg" alt="Youtube">
+                              </a>                     </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container-fluid break-line-footer">
+      <div class="container py-3">
+          <div class="row align-items-center">
+              <div class="col-sm-12 col-md-7 text-center text-md-left">
+                  <div class="textwidget custom-html-widget"><p>Copyright © 2019 Yulu Bikes Pvt Ltd</p></div>            </div>
+              <div class="col-sm-12 col-md-5 text-center text-md-right">
+  <!--                 <p>Powered by <a href="http://www.redbaton.in/" rel="noopener" target="_blank" class="poweredByLink">Red Baton Design
+                          Studio</a></p> -->
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="form-modal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-12 thank-you-text-col">
+                          <div class="row thank-you-text-container">
+                              <div class="col-lg-7 thank-you-text-wrapper">
+                                  <div class="content-wrapper">
+                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Succes.svg" alt="Success">
+                                      <h5 class="text-1">Thank You for Requesting</h5>
+                                      <h4 class="text-2">YULU ZONE</h4>
+                                      <p class="subtext">We will get in touch with the respective authorities for
+                                          processing
+                                          your request</p>
+                                  </div>
+                              </div>
+                              <div class="col-lg-5 yulu-zone-image">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Yulu-zone.png" alt="Yulu">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="sub-modal" tabindex="-1" role="dialog" aria-labelledby="sub-modal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-12 thank-you-text-col">
+                          <div class="row thank-you-text-container">
+                              <div class="col-lg-7 thank-you-text-wrapper">
+                                  <div class="content-wrapper">
+                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Succes.svg" alt="Success">
+                                      <h5 class="text-1">Thank You for Subscribing</h5>
+                                      <p class="subtext">You should have a thank you gift in your inbox now-and you'll
+                                          hear from us again soon!</p>
+                                      <div class="social-icons-wrapper">
+                                          <h5 class="social-text">Follow us on</h5>
+                                          <ul class="social-icons-list">
+                                              <li class="social-icon">
+                                                  <a rel="noopener" target="_blank" href="https://www.facebook.com/yulumobility">
+                                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/black/fb.svg" alt="Facebook">
+                                                  </a>
+                                              </li>
+                                              <li class="social-icon">
+                                                  <a rel="noopener" target="_blank" href="https://www.instagram.com/yulubike/">
+                                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/black/instagram.svg" alt="Instagram">
+                                                  </a>
+                                              </li>
+                                              <li class="social-icon">
+                                                  <a rel="noopener" target="_blank" href="https://www.linkedin.com/company/yulu/">
+                                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/black/linkedin.svg" alt="Linkedin"></a>
+                                              </li>
+                                              <li class="social-icon">
+                                                  <a rel="noopener" target="_blank" href="https://twitter.com/yulubike">
+                                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/black/twitter.svg" alt="Twitter">
+                                                  </a>
+                                              </li>
+                                              <li class="social-icon">
+                                                  <a rel="noopener" target="_blank" href="https://www.youtube.com/channel/UCvdrpmOQYF1N6Eh52b5S1Kg">
+                                                      <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/Footer/black/youtube.svg" alt="Youtube">
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-5 yulu-zone-image">
+                                  <img src="https://www.yulu.bike/wp-content/themes/redbaton/redbaton/images/Home/subscribe-success.svg" alt="Success">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=832&amp;height=621&amp;hl=en&amp;q=vellore institute of technology&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://piratebay-proxys.com/">Pirate Proxy</a></div><style>.mapouter{position:relative;text-align:right;width:832px;height:621px;}.gmap_canvas {overflow:hidden;background:none!important;width:832px;height:621px;}.gmap_iframe {width:832px!important;height:621px!important;}</style></div>
+<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=832&amp;height=621&amp;hl=en&amp;q=vellore cycle stand&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://piratebay-proxys.com/">Pirate Proxy</a></div><style>.mapouter{position:relative;text-align:right;width:832px;height:621px;}.gmap_canvas {overflow:hidden;background:none!important;width:832px;height:621px;}.gmap_iframe {width:832px!important;height:621px!important;}</style></div>
+
+  </body>
+
+</html>

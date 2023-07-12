@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <section>
+      <div id="qr-reader"
+      style="margin-left: 300px;
+      margin-right: 300px;
+      border-width: 10px;
+       ">
+
+      </div>
+      <script>
+          function onScanSuccess(decodedText, decodedResult) {
+      console.log(`Code scanned = ${decodedText}`, decodedResult);
+  }
+  var html5QrcodeScanner = new Html5QrcodeScanner(
+  	"qr-reader", { fps: 10, qrbox: 250 });
+  html5QrcodeScanner.render(onScanSuccess);
+      </script>
+    </section>
+
+  </body>
+</html>

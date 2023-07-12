@@ -1,0 +1,198 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#title{
+  background-color: #97D2EC;
+  color: #fff;
+}
+
+.container-fulid{
+  height: 750px;
+  padding: 3% 15% 7%;
+}
+
+.navbar{
+  padding: 0 0 4.5rem;
+}
+
+.nav-item{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  padding-top: 100px;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  padding: 30px;
+}
+
+h4{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+p{
+  font-family: 'Lilita One', cursive;
+  color: #8f8f8f;
+  font-weight: bold;
+}
+
+.sign{
+  background-color: #277BC0;
+  padding: 10px 30px;
+  margin-top: 50px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: solid #277BC0 1px;
+  color: white;
+  font-size: 17px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.sign:hover{
+  background-color: #0F3460;
+}
+
+#instsec{
+  padding: 5% 15%;
+  background-color: #ffff;
+}
+
+.inst{
+  text-align: center;
+  /* padding: 50px; */
+}
+
+.in{
+  text-align: center;
+}
+
+.inst-box{
+  text-align: center;
+  padding: 8px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+#touch{
+  padding: 7% 15%;
+  background-color: #97D2EC;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.mail{
+  width:500px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 30px;
+  border: 1px solid white;
+}
+
+.sub{
+  width: 100px;
+  margin-left: 5px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0 solid #A5F1E9;
+}
+
+.sub:hover{
+  background-color: #A5F1E9;
+}
+
+#footer{
+  padding: 3% 15%;
+  background-color: #16213E;
+}
+
+/* .footer{
+  float: left;
+}
+
+li{
+  color: white;
+  text-decoration: none;
+  list-style-type:none;
+}
+
+.cr{
+  text-align: center;
+} */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0 10px;
+  height: 100%;
+  background: black;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 15px;
+}
+
+#container {
+  text-align: center;
+  margin: 0;
+}
+
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+
+#btn-scan-qr {
+  cursor: pointer;
+}
+
+#btn-scan-qr img {
+  height: 10em;
+  padding: 15px;
+  margin: 15px;
+  background: white;
+}
+
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+.button {
+	--x: 50%;
+	--y: 50%;
+
+	position: relative;
+	appearance: none;
+	padding: 1em 2em;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+
+	// The magic
+	border: 2px solid transparent;
+	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+}
